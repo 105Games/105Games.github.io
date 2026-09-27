@@ -1,0 +1,119 @@
+:root {
+  --bg: #120f16;
+  --panel: #1c1822;
+  --panel-2: #241f2c;
+  --line: #342d3e;
+  --text: #f1ece6;
+  --muted: #b3aab9;
+  --accent: #f0a23a;
+  --accent-deep: #c9761b;
+  --teal: #31d6bf;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Tajawal", "Noto Sans Arabic", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* one language at a time — the switch sets <html lang> */
+html[lang="ar"] .en { display: none !important; }
+html[lang="en"] .ar { display: none !important; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+header.top {
+  position: sticky; top: 0; z-index: 5;
+  background: rgba(18, 15, 22, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; letter-spacing: 0.5px; }
+.brand:hover { text-decoration: none; }
+.brand .mark {
+  display: inline-grid; place-items: center;
+  width: 38px; height: 38px; border-radius: 10px;
+  background: linear-gradient(160deg, var(--accent), var(--accent-deep));
+  color: #1b1208; font-weight: 900; font-size: 15px;
+}
+
+.lang { display: flex; gap: 6px; }
+.lang button {
+  border: 1px solid var(--line); background: var(--panel); color: var(--muted);
+  border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 14px; cursor: pointer;
+}
+html[lang="ar"] .lang button[data-lang="ar"],
+html[lang="en"] .lang button[data-lang="en"] { background: var(--teal); color: #07231f; border-color: var(--teal); font-weight: 700; }
+
+.hero { padding: 56px 0 28px; }
+.hero h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.2; margin: 0 0 10px; }
+.hero p { color: var(--muted); margin: 0; font-size: 18px; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin: 18px 0;
+}
+.card h2 { margin: 0 0 8px; font-size: 22px; }
+.card h3 { margin: 18px 0 6px; font-size: 18px; color: var(--accent); }
+.card p, .card li { color: var(--text); }
+.card .muted, .muted { color: var(--muted); }
+.card ul { padding-inline-start: 22px; margin: 6px 0; }
+
+.game {
+  display: flex; gap: 18px; align-items: center;
+}
+.game .icon {
+  flex: 0 0 72px; height: 72px; border-radius: 18px;
+  background: linear-gradient(160deg, #f6b24d, #c9761b);
+  display: grid; place-items: center; font-size: 34px;
+}
+.btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.btn {
+  display: inline-block; padding: 10px 18px; border-radius: 12px;
+  background: var(--panel-2); border: 1px solid var(--line); color: var(--text); font-weight: 600;
+}
+.btn.primary { background: linear-gradient(180deg, #f6b24d, #e38f22); color: #1b1208; border-color: #c9761b; }
+.btn:hover { text-decoration: none; filter: brightness(1.08); }
+
+.social { display: flex; flex-wrap: wrap; gap: 10px; }
+.social a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 16px; border-radius: 12px; background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+}
+.social a:hover { text-decoration: none; border-color: var(--accent); }
+.social svg { width: 20px; height: 20px; fill: currentColor; }
+
+.doc h1 { font-size: clamp(26px, 5vw, 36px); margin: 36px 0 4px; }
+.doc .meta { color: var(--muted); margin-bottom: 8px; }
+
+table.data { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
+table.data th, table.data td { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top; text-align: start; }
+table.data th { background: var(--panel-2); }
+
+footer {
+  border-top: 1px solid var(--line); margin-top: 48px; padding: 24px 0 40px; color: var(--muted); font-size: 14px;
+}
+footer .links { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 10px; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .card { padding: 18px; }
+  .game { flex-direction: column; align-items: flex-start; }
+  table.data { font-size: 14px; }
+}
