@@ -21,7 +21,7 @@
     <!-- ═══════════════════════════ العربية ═══════════════════════════ -->
     <div class="ar">
       <h1>سياسة الخصوصية — Convoy Blast</h1>
-      <p class="meta">آخر تحديث: 27 سبتمبر 2026</p>
+      <p class="meta">آخر تحديث: 7 أكتوبر 2026</p>
 
       <div class="card">
         <p>توضّح هذه السياسة ما هي البيانات التي تجمعها لعبة <strong>Convoy Blast</strong> («اللعبة») وكيف تُستخدم وكيف تطلب حذفها.</p>
@@ -35,12 +35,13 @@
         <table class="data">
           <tr><th>البيانات</th><th>لماذا</th><th>من يعالجها</th></tr>
           <tr><td>معرّف لاعب عشوائي يُنشأ داخل اللعبة، ومعرّف حساب Firebase (حساب مجهول الهوية)</td><td>لحفظ تقدّمك وربطه بحسابك</td><td>Google Firebase</td></tr>
-          <tr><td>اسم ومعرّف حسابك في Google Play Games (فقط إن سجّلت الدخول)</td><td>لإرجاع تقدّمك على جهاز جديد أو على الكمبيوتر</td><td>Google Play Games، Firebase Authentication</td></tr>
+          <tr><td>اسم ومعرّف حسابك في Google Play Games (على أندرويد فقط، وفقط إن سجّلت الدخول)</td><td>لإرجاع تقدّمك على جهاز جديد أو على الكمبيوتر</td><td>Google Play Games، Firebase Authentication</td></tr>
           <tr><td>ملف حفظ اللعبة (مشفّر): المراحل، العملات، الترقيات، الإعدادات</td><td>نسخة احتياطية سحابية لتقدّمك</td><td>Firebase Cloud Firestore (خوادم Google في الدمام، السعودية)</td></tr>
           <tr><td>تقارير الأعطال والأخطاء: طراز الجهاز، نظام التشغيل، إصدار اللعبة، آخر سطور سجل اللعبة</td><td>لإصلاح الأعطال</td><td>Firebase Crashlytics</td></tr>
           <tr><td>إحصاءات استخدام: بداية ونهاية المراحل، الكسب والإنفاق داخل اللعبة، مشاهدة الإعلانات</td><td>لتحسين توازن اللعبة ومتعتها</td><td>Firebase Analytics (Google Analytics)</td></tr>
-          <tr><td>معرّف الإعلانات، عنوان IP، ومعلومات الجهاز</td><td>لعرض الإعلانات وقياسها — حسب موافقتك</td><td>Google AdMob</td></tr>
-          <tr><td>رقم الطلب ورمز الشراء (لا نرى بيانات بطاقتك أبداً)</td><td>لتسليم مشترياتك داخل اللعبة ومنع تكرارها</td><td>Google Play Billing</td></tr>
+          <tr><td>معرّف الإعلانات (على آيفون: فقط إن سمحت بذلك في سؤال آبل عن التتبع)، عنوان IP، ومعلومات الجهاز</td><td>لعرض الإعلانات وقياسها — حسب موافقتك</td><td>Google AdMob</td></tr>
+          <tr><td>رقم الطلب ورمز الشراء (لا نرى بيانات بطاقتك أبداً)</td><td>لتسليم مشترياتك داخل اللعبة ومنع تكرارها</td><td>Google Play Billing على أندرويد، وApple App Store على آيفون</td></tr>
+          <tr><td>رمز الإشعارات للجهاز (فقط إن سمحت بالإشعارات)</td><td>لإرسال أخبار اللعبة وتذكيرات تختار تفعيلها</td><td>Firebase Cloud Messaging، وApple Push Notification service على آيفون</td></tr>
           <tr><td>عند الضغط على «بلّغ عن مشكلة»: ملف الحفظ، طراز الجهاز، النظام، إصدار اللعبة، آخر سطور السجل</td><td>لفحص المشكلة التي أبلغت عنها</td><td>Firebase Cloud Firestore</td></tr>
         </table>
       </div>
@@ -50,11 +51,12 @@
         <p>تعرض اللعبة إعلانات من <strong>Google AdMob</strong>: إعلانات بمكافأة تختار أنت مشاهدتها، وإعلان بانر في المقر، وإعلان قصير أحياناً بعد الفوز. في المناطق التي يشترطها القانون (مثل الاتحاد الأوروبي والمملكة المتحدة) تطلب منك اللعبة الموافقة قبل استخدام بياناتك لإعلانات مخصّصة، ويمكنك تغيير اختيارك في أي وقت من <strong>الإعدادات ← الخصوصية والإعلانات</strong>.</p>
         <p>لمعرفة كيف تستخدم Google البيانات: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">policies.google.com/technologies/partner-sites</a></p>
         <p>يمكنك أيضاً إعادة ضبط معرّف الإعلانات أو إيقاف الإعلانات المخصّصة من إعدادات Google في جهازك. شراء «إزالة الإعلانات» يوقف البانر والإعلانات بين المراحل.</p>
+        <p>على آيفون، تسألك اللعبة سؤال آبل «السماح بالتتبع» قبل أن تبدأ الإعلانات. إن رفضت، لا نصل إلى معرّف الإعلانات وتبقى الإعلانات غير مخصّصة. يمكنك تغيير ذلك في أي وقت من <strong>الإعدادات ← الخصوصية والأمن ← التتبع</strong> في جهازك.</p>
       </div>
 
       <div class="card">
         <h2>٣. المشتريات داخل اللعبة</h2>
-        <p>تتم المدفوعات بالكامل عبر <strong>Google Play</strong>. لا نستلم ولا نخزّن أي بيانات بطاقات أو معلومات دفع. نستلم فقط تأكيد الشراء (رقم الطلب) لنضيف لك ما اشتريته.</p>
+        <p>تتم المدفوعات بالكامل عبر <strong>Google Play</strong> على أندرويد، وعبر <strong>Apple App Store</strong> على آيفون. لا نستلم ولا نخزّن أي بيانات بطاقات أو معلومات دفع. نستلم فقط تأكيد الشراء (رقم الطلب) لنضيف لك ما اشتريته.</p>
       </div>
 
       <div class="card">
@@ -85,8 +87,9 @@
       <div class="card">
         <h2>٨. خدمات الطرف الثالث</h2>
         <ul>
-          <li>Google Play Services و Google Play Games — <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">سياسة خصوصية Google</a></li>
-          <li>Firebase (Authentication، Firestore، Crashlytics، Analytics، Remote Config) — <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">الخصوصية في Firebase</a></li>
+          <li>Google Play Services و Google Play Games (أندرويد) — <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">سياسة خصوصية Google</a></li>
+          <li>Apple App Store وApple Push Notification service (آيفون) — <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">سياسة خصوصية Apple</a></li>
+          <li>Firebase (Authentication، Firestore، Crashlytics، Analytics، Remote Config، Cloud Messaging) — <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">الخصوصية في Firebase</a></li>
           <li>Google AdMob — <a href="https://support.google.com/admob/answer/6128543" rel="noopener" target="_blank">سياسات AdMob</a></li>
         </ul>
       </div>
@@ -102,7 +105,7 @@
     <!-- ═══════════════════════════ English ═══════════════════════════ -->
     <div class="en">
       <h1>Privacy Policy — Convoy Blast</h1>
-      <p class="meta">Last updated: September 27, 2026</p>
+      <p class="meta">Last updated: October 7, 2026</p>
 
       <div class="card">
         <p>This policy explains what data <strong>Convoy Blast</strong> (the "Game") collects, how it is used, and how you can ask for it to be deleted.</p>
@@ -116,12 +119,13 @@
         <table class="data">
           <tr><th>Data</th><th>Why</th><th>Processed by</th></tr>
           <tr><td>A random player ID created by the Game, and a Firebase account ID (an anonymous account)</td><td>To save your progress and tie it to your account</td><td>Google Firebase</td></tr>
-          <tr><td>Your Google Play Games name and player ID (only if you sign in)</td><td>To bring your progress back on a new device or on PC</td><td>Google Play Games, Firebase Authentication</td></tr>
+          <tr><td>Your Google Play Games name and player ID (Android only, and only if you sign in)</td><td>To bring your progress back on a new device or on PC</td><td>Google Play Games, Firebase Authentication</td></tr>
           <tr><td>The Game's save file (encrypted): stages, currencies, upgrades, settings</td><td>A cloud backup of your progress</td><td>Firebase Cloud Firestore (Google servers in Dammam, Saudi Arabia)</td></tr>
           <tr><td>Crash and error reports: device model, OS, game version, the last lines of the game log</td><td>To fix crashes</td><td>Firebase Crashlytics</td></tr>
           <tr><td>Usage statistics: stage start and end, in-game earning and spending, ads watched</td><td>To improve the Game's balance and fun</td><td>Firebase Analytics (Google Analytics)</td></tr>
-          <tr><td>Advertising ID, IP address and device information</td><td>To show and measure ads — according to your consent</td><td>Google AdMob</td></tr>
-          <tr><td>Order number and purchase token (we never see your card details)</td><td>To deliver your in-game purchases and prevent duplicates</td><td>Google Play Billing</td></tr>
+          <tr><td>Advertising ID (on iPhone: only if you allow it in Apple's tracking prompt), IP address and device information</td><td>To show and measure ads — according to your consent</td><td>Google AdMob</td></tr>
+          <tr><td>Order number and purchase token (we never see your card details)</td><td>To deliver your in-game purchases and prevent duplicates</td><td>Google Play Billing on Android, Apple App Store on iPhone</td></tr>
+          <tr><td>Your device's push token (only if you allow notifications)</td><td>To send game news and reminders you choose to turn on</td><td>Firebase Cloud Messaging, and Apple Push Notification service on iPhone</td></tr>
           <tr><td>When you tap "Report a problem": the save file, device model, OS, game version, the last lines of the log</td><td>To investigate the problem you reported</td><td>Firebase Cloud Firestore</td></tr>
         </table>
       </div>
@@ -131,11 +135,12 @@
         <p>The Game shows ads from <strong>Google AdMob</strong>: rewarded ads that you choose to watch, a banner in the HQ, and occasionally a short ad after a win. Where the law requires it (for example the EEA and the UK) the Game asks for your consent before your data is used for personalised ads, and you can change your choice at any time in <strong>Settings → Privacy &amp; ads</strong>.</p>
         <p>How Google uses data: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">policies.google.com/technologies/partner-sites</a></p>
         <p>You can also reset your advertising ID or opt out of personalised ads in your device's Google settings. Buying "Remove ads" turns off the banner and the between-level ads.</p>
+        <p>On iPhone, the Game shows Apple's "Allow tracking" prompt before ads start. If you decline, we never access the advertising identifier and ads stay non-personalised. You can change this at any time in your device's <strong>Settings → Privacy &amp; Security → Tracking</strong>.</p>
       </div>
 
       <div class="card">
         <h2>3. In-app purchases</h2>
-        <p>All payments are handled by <strong>Google Play</strong>. We never receive or store card or payment details. We only receive the purchase confirmation (order number) so we can deliver what you bought.</p>
+        <p>All payments are handled by <strong>Google Play</strong> on Android and by the <strong>Apple App Store</strong> on iPhone. We never receive or store card or payment details. We only receive the purchase confirmation (order number) so we can deliver what you bought.</p>
       </div>
 
       <div class="card">
@@ -166,8 +171,9 @@
       <div class="card">
         <h2>8. Third-party services</h2>
         <ul>
-          <li>Google Play Services and Google Play Games — <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy</a></li>
-          <li>Firebase (Authentication, Firestore, Crashlytics, Analytics, Remote Config) — <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Privacy in Firebase</a></li>
+          <li>Google Play Services and Google Play Games (Android) — <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy</a></li>
+          <li>Apple App Store and Apple Push Notification service (iPhone) — <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple Privacy Policy</a></li>
+          <li>Firebase (Authentication, Firestore, Crashlytics, Analytics, Remote Config, Cloud Messaging) — <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Privacy in Firebase</a></li>
           <li>Google AdMob — <a href="https://support.google.com/admob/answer/6128543" rel="noopener" target="_blank">AdMob policies</a></li>
         </ul>
       </div>
