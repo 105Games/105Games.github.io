@@ -22,7 +22,7 @@
     <!-- ═══════════════════════════ العربية ═══════════════════════════ -->
     <div class="ar">
       <h1>سياسة الخصوصية — Convoy Blast</h1>
-      <p class="meta">آخر تحديث: 7 أكتوبر 2026</p>
+      <p class="meta">آخر تحديث: 12 أكتوبر 2026</p>
 
       <div class="card">
         <p>توضّح هذه السياسة ما هي البيانات التي تجمعها لعبة <strong>Convoy Blast</strong> («اللعبة») وكيف تُستخدم وكيف تطلب حذفها.</p>
@@ -37,13 +37,14 @@
           <tr><th>البيانات</th><th>لماذا</th><th>من يعالجها</th></tr>
           <tr><td>معرّف لاعب عشوائي يُنشأ داخل اللعبة، ومعرّف حساب Firebase (حساب مجهول الهوية)</td><td>لحفظ تقدّمك وربطه بحسابك</td><td>Google Firebase</td></tr>
           <tr><td>اسم ومعرّف حسابك في Google Play Games (على أندرويد فقط، وفقط إن سجّلت الدخول)</td><td>لإرجاع تقدّمك على جهاز جديد أو على الكمبيوتر</td><td>Google Play Games، Firebase Authentication</td></tr>
+          <tr><td>بريد ومعرّف حساب Google الذي تختاره بنفسك من <strong>الإعدادات ← حساب Google</strong> (اختياري)</td><td>لحفظ تقدّمك على حسابك، وللتبديل بين حساباتك</td><td>Google، Firebase Authentication</td></tr>
           <tr><td>ملف حفظ اللعبة (مشفّر): المراحل، العملات، الترقيات، الإعدادات</td><td>نسخة احتياطية سحابية لتقدّمك</td><td>Firebase Cloud Firestore (خوادم Google في الدمام، السعودية)</td></tr>
           <tr><td>تقارير الأعطال والأخطاء: طراز الجهاز، نظام التشغيل، إصدار اللعبة، آخر سطور سجل اللعبة</td><td>لإصلاح الأعطال</td><td>Firebase Crashlytics</td></tr>
           <tr><td>إحصاءات استخدام: بداية ونهاية المراحل، الكسب والإنفاق داخل اللعبة، مشاهدة الإعلانات</td><td>لتحسين توازن اللعبة ومتعتها</td><td>Firebase Analytics (Google Analytics)</td></tr>
           <tr><td>معرّف الإعلانات (على آيفون: فقط إن سمحت بذلك في سؤال آبل عن التتبع)، عنوان IP، ومعلومات الجهاز</td><td>لعرض الإعلانات وقياسها — حسب موافقتك</td><td>Google AdMob</td></tr>
           <tr><td>رقم الطلب ورمز الشراء (لا نرى بيانات بطاقتك أبداً)</td><td>لتسليم مشترياتك داخل اللعبة ومنع تكرارها</td><td>Google Play Billing على أندرويد، وApple App Store على آيفون</td></tr>
           <tr><td>رمز الإشعارات للجهاز (فقط إن سمحت بالإشعارات)</td><td>لإرسال أخبار اللعبة وتذكيرات تختار تفعيلها</td><td>Firebase Cloud Messaging، وApple Push Notification service على آيفون</td></tr>
-          <tr><td>عند الضغط على «بلّغ عن مشكلة»: ملف الحفظ، طراز الجهاز، النظام، إصدار اللعبة، آخر سطور السجل</td><td>لفحص المشكلة التي أبلغت عنها</td><td>Firebase Cloud Firestore</td></tr>
+          <tr><td>عند إرسال «أبلغ عن مشكلة» فقط: نوع المشكلة، ما تكتبه، والصور التي تختار إرفاقها بنفسك؛ ومعها ملف الحفظ، إصدار اللعبة، طراز الجهاز والشركة المصنّعة، نسخة النظام، حالة الذاكرة والمساحة والبطارية والحرارة، نوع الشبكة (بدون أي عنوان)، الشاشة، اللغة والمنطقة الزمنية، مصدر تثبيت اللعبة، حالة اللعبة (المرحلة، العملات، المتجر، الإعلانات، الحفظ السحابي)، وآخر سطور سجل اللعبة. لا نأخذ أي ملفات أو صور لم تخترها، ولا جهات اتصال، ولا بيانات تطبيقات أخرى.</td><td>لفهم المشكلة التي أبلغت عنها وإصلاحها</td><td>Firebase Cloud Firestore</td></tr>
         </table>
       </div>
 
@@ -66,13 +67,13 @@
           <li>ملف الحفظ السحابي: طالما حسابك موجود، أو حتى تطلب حذفه.</li>
           <li>تقارير الأعطال: حتى 90 يوماً (سياسة Crashlytics).</li>
           <li>الإحصاءات: حسب مدة الاحتفاظ القياسية في Google Analytics.</li>
-          <li>تقارير المشاكل التي ترسلها: حتى حلّ المشكلة، ثم تُحذف.</li>
+          <li>تقارير المشاكل التي ترسلها والصور المرفقة بها: حتى حلّ المشكلة، ثم تُحذف.</li>
         </ul>
       </div>
 
       <div class="card">
         <h2>٥. حذف بياناتك</h2>
-        <p>يمكنك طلب حذف كل بياناتك في أي وقت — التفاصيل في صفحة <a href="delete-data.html">حذف البيانات</a>. حذف اللعبة من جهازك يمسح البيانات المحفوظة عليه.</p>
+        <p>من داخل اللعبة: <strong>الإعدادات ← احذف بياناتي</strong> — بعد تأكيدين يُحذف تقدّمك من السحابة ومن جهازك وحسابك في اللعبة فوراً. أو اطلب الحذف بالبريد — التفاصيل في صفحة <a href="delete-data.html">حذف البيانات</a>. حذف اللعبة من جهازك يمسح البيانات المحفوظة عليه فقط.</p>
       </div>
 
       <div class="card">
@@ -88,7 +89,7 @@
       <div class="card">
         <h2>٨. خدمات الطرف الثالث</h2>
         <ul>
-          <li>Google Play Services و Google Play Games (أندرويد) — <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">سياسة خصوصية Google</a></li>
+          <li>Google Play Services و Google Play Games وتسجيل الدخول بحساب Google (أندرويد) — <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">سياسة خصوصية Google</a></li>
           <li>Apple App Store وApple Push Notification service (آيفون) — <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">سياسة خصوصية Apple</a></li>
           <li>Firebase (Authentication، Firestore، Crashlytics، Analytics، Remote Config، Cloud Messaging) — <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">الخصوصية في Firebase</a></li>
           <li>Google AdMob — <a href="https://support.google.com/admob/answer/6128543" rel="noopener" target="_blank">سياسات AdMob</a></li>
@@ -106,7 +107,7 @@
     <!-- ═══════════════════════════ English ═══════════════════════════ -->
     <div class="en">
       <h1>Privacy Policy — Convoy Blast</h1>
-      <p class="meta">Last updated: October 7, 2026</p>
+      <p class="meta">Last updated: October 12, 2026</p>
 
       <div class="card">
         <p>This policy explains what data <strong>Convoy Blast</strong> (the "Game") collects, how it is used, and how you can ask for it to be deleted.</p>
@@ -121,13 +122,14 @@
           <tr><th>Data</th><th>Why</th><th>Processed by</th></tr>
           <tr><td>A random player ID created by the Game, and a Firebase account ID (an anonymous account)</td><td>To save your progress and tie it to your account</td><td>Google Firebase</td></tr>
           <tr><td>Your Google Play Games name and player ID (Android only, and only if you sign in)</td><td>To bring your progress back on a new device or on PC</td><td>Google Play Games, Firebase Authentication</td></tr>
+          <tr><td>The email and ID of the Google account you choose yourself in <strong>Settings → Google account</strong> (optional)</td><td>To keep your progress on your account, and to switch between your accounts</td><td>Google, Firebase Authentication</td></tr>
           <tr><td>The Game's save file (encrypted): stages, currencies, upgrades, settings</td><td>A cloud backup of your progress</td><td>Firebase Cloud Firestore (Google servers in Dammam, Saudi Arabia)</td></tr>
           <tr><td>Crash and error reports: device model, OS, game version, the last lines of the game log</td><td>To fix crashes</td><td>Firebase Crashlytics</td></tr>
           <tr><td>Usage statistics: stage start and end, in-game earning and spending, ads watched</td><td>To improve the Game's balance and fun</td><td>Firebase Analytics (Google Analytics)</td></tr>
           <tr><td>Advertising ID (on iPhone: only if you allow it in Apple's tracking prompt), IP address and device information</td><td>To show and measure ads — according to your consent</td><td>Google AdMob</td></tr>
           <tr><td>Order number and purchase token (we never see your card details)</td><td>To deliver your in-game purchases and prevent duplicates</td><td>Google Play Billing on Android, Apple App Store on iPhone</td></tr>
           <tr><td>Your device's push token (only if you allow notifications)</td><td>To send game news and reminders you choose to turn on</td><td>Firebase Cloud Messaging, and Apple Push Notification service on iPhone</td></tr>
-          <tr><td>When you tap "Report a problem": the save file, device model, OS, game version, the last lines of the log</td><td>To investigate the problem you reported</td><td>Firebase Cloud Firestore</td></tr>
+          <tr><td>Only when you send "Report a problem": the kind of problem, what you write, and any pictures you choose to attach; with them the save file, game version, device model and manufacturer, OS version, memory, storage, battery and temperature state, network type (no address), screen, language and time zone, how the Game was installed, the Game's state (stage, currencies, store, ads, cloud save) and the last lines of the game log. We never take files or photos you did not choose, contacts, or other apps' data.</td><td>To understand and fix the problem you reported</td><td>Firebase Cloud Firestore</td></tr>
         </table>
       </div>
 
@@ -150,13 +152,13 @@
           <li>Cloud save: while your account exists, or until you ask us to delete it.</li>
           <li>Crash reports: up to 90 days (Crashlytics policy).</li>
           <li>Statistics: according to Google Analytics' standard retention.</li>
-          <li>Problem reports you send: until the problem is resolved, then deleted.</li>
+          <li>Problem reports you send, and the pictures attached to them: until the problem is resolved, then deleted.</li>
         </ul>
       </div>
 
       <div class="card">
         <h2>5. Deleting your data</h2>
-        <p>You can ask us to delete all your data at any time — see <a href="delete-data.html">Delete my data</a>. Uninstalling the Game erases the data stored on your device.</p>
+        <p>In the Game: <strong>Settings → Delete my data</strong> — after two confirmations your progress is deleted from the cloud and from your device, together with your game account, at once. Or ask by email — see <a href="delete-data.html">Delete my data</a>. Uninstalling the Game erases only the data stored on your device.</p>
       </div>
 
       <div class="card">
@@ -172,7 +174,7 @@
       <div class="card">
         <h2>8. Third-party services</h2>
         <ul>
-          <li>Google Play Services and Google Play Games (Android) — <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy</a></li>
+          <li>Google Play Services, Google Play Games and Sign in with Google (Android) — <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy</a></li>
           <li>Apple App Store and Apple Push Notification service (iPhone) — <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple Privacy Policy</a></li>
           <li>Firebase (Authentication, Firestore, Crashlytics, Analytics, Remote Config, Cloud Messaging) — <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Privacy in Firebase</a></li>
           <li>Google AdMob — <a href="https://support.google.com/admob/answer/6128543" rel="noopener" target="_blank">AdMob policies</a></li>
