@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convoy Blast — Play Free Now | 105Games</title>
+  <meta name="description" content="100 Stages. 10 Giant Bosses. 5 War-Trucks. Download Convoy Blast FREE on Google Play, App Store & PC!">
+  
+  <!-- OpenGraph tags for Facebook Link Card + Play Game CTA button -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://105games.github.io/convoyblast/">
+  <meta property="og:title" content="CONVOY BLAST — 100 Stages of Armored Action! 🚛🔥">
+  <meta property="og:description" content="Download FREE on Android & PC! 5 War-Trucks, 4 Heavy Weapons & 10 Giant Bosses.">
+  <meta property="og:image" content="https://105games.github.io/assets/convoy_blast_banner.jpg">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="499">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://105games.github.io/assets/convoy_blast_banner.jpg">
+
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #07090e;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+    .card {
+      max-width: 540px;
+      width: 100%;
+      background: #111520;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    }
+    .banner {
+      width: 100%;
+      display: block;
+    }
+    .content {
+      padding: 24px 20px 28px;
+    }
+    h1 {
+      font-size: 26px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      color: #ffb703;
+    }
+    .sub {
+      color: #b0b8c8;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+    .btn-play {
+      background: linear-gradient(135deg, #ff5400, #ff8800);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(255, 84, 0, 0.4);
+    }
+    .btn-pc {
+      background: #1e2638;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-ios {
+      background: #161b26;
+      color: #8b95a8;
+      border: 1px dashed rgba(255,255,255,0.15);
+      cursor: default;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #6c7588;
+    }
+    .footer a { color: #9aa5b8; text-decoration: none; }
+    .status-msg {
+      display: none;
+      margin-bottom: 16px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(255, 183, 3, 0.12);
+      color: #ffd166;
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    const PLAY_URL = "https://play.google.com/store/apps/details?id=com.games105.convoyblast";
+    // Paste the App Store link here once Apple approves (e.g. "https://apps.apple.com/app/id1234567890").
+    // Empty = iPhone/iPad visitors see "Coming Soon" instead of being redirected.
+    const APP_STORE_URL = "";
+    window.addEventListener("DOMContentLoaded", () => {
+      const ua = navigator.userAgent || "";
+      const isAndroid = /Android/i.test(ua);
+      // iPadOS 13+ reports a desktop Mac user agent; touch points tell it apart from a real Mac.
+      const isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
+      const msgEl = document.getElementById("status-msg");
+      const iosBtn = document.getElementById("btn-ios");
+      if (APP_STORE_URL && iosBtn) {
+        iosBtn.outerHTML = '<a id="btn-ios" class="btn btn-pc" href="' + APP_STORE_URL + '"><span>🍎 Download Free on the App Store (iPhone / iPad)</span></a>';
+      }
+      const go = (url, text) => {
+        if (msgEl) { msgEl.style.display = "block"; msgEl.innerText = text; }
+        setTimeout(() => { window.location.replace(url); }, 600);
+      };
+      if (isAndroid) {
+        go(PLAY_URL, "Redirecting to Google Play Store... | جاري تحويلك إلى متجر Google Play...");
+      } else if (isIOS) {
+        if (APP_STORE_URL) {
+          go(APP_STORE_URL, "Redirecting to the App Store... | جاري تحويلك إلى App Store...");
+        } else if (msgEl) {
+          msgEl.style.display = "block";
+          msgEl.innerText = "iOS version for iPhone & iPad is coming very soon! | نسخة الآيفون قريباً جداً!";
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="card">
+    <img class="banner" src="../assets/convoy_blast_banner.jpg" alt="Convoy Blast">
+    <div class="content">
+      <h1>CONVOY BLAST</h1>
+      <p class="sub">100 Stages • 10 Giant Bosses • 5 Armored War-Trucks<br>قُد قافلتك المدرعة عبر 100 مرحلة و10 زعماء عمالقة!</p>
+      <div id="status-msg" class="status-msg"></div>
+      <div class="btns">
+        <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.games105.convoyblast">
+          <span>📲 Download Free on Google Play (Android)</span>
+        </a>
+        <a class="btn btn-pc" href="https://play.google.com/store/apps/details?id=com.games105.convoyblast">
+          <span>💻 Play on PC (Google Play Games)</span>
+        </a>
+        <div id="btn-ios" class="btn btn-ios">
+          <span>🍎 App Store (iPhone / iPad) — Coming Soon</span>
+        </div>
+      </div>
+      <div class="footer">
+        <a href="../">105GAMES Official Hub</a> • <a href="../convoy-blast/privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
