@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Convoy Blast — Play Free Now | 105Games</title>
-  <meta name="description" content="100 Stages. 10 Giant Bosses. 5 War-Trucks. Download Convoy Blast FREE on Google Play, App Store & PC!">
-  
-  <!-- OpenGraph tags for Facebook Link Card + Play Game CTA button -->
+  <title>Convoy Blast — Play Free Now | 105GAMES</title>
+  <meta name="description" content="100 Stages. 10 Giant Bosses. 5 War-Trucks. Download Convoy Blast FREE on Google Play and PC.">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Link-preview card (Facebook / WhatsApp / X). Crawlers do not run scripts, so this card has ONE language. -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://105games.github.io/convoyblast/">
   <meta property="og:title" content="CONVOY BLAST — 100 Stages of Armored Action! 🚛🔥">
@@ -15,23 +16,42 @@
   <meta property="og:image:width" content="1000">
   <meta property="og:image:height" content="499">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@105_Games">
   <meta name="twitter:image" content="https://105games.github.io/assets/convoy_blast_banner.jpg">
 
   <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <!-- Picks ONE language: ?lang=ar|en, then the saved choice, then the browser's language. -->
+  <script src="../lang.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html[lang="ar"] .en, html[lang="en"] .ar { display: none !important; }
     body {
-      background: #07090e;
+      background: radial-gradient(1200px 600px at 50% -10%, #1a2233 0%, #07090e 60%) #07090e;
       color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, 'Noto Sans Arabic', Geneva, Verdana, sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 20px;
+      padding: 14px 16px 28px;
       text-align: center;
     }
+    .top {
+      width: 100%;
+      max-width: 540px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .top img { height: 30px; width: auto; display: block; }
+    .lang { display: flex; gap: 4px; background: #111520; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; padding: 3px; }
+    .lang button {
+      font: inherit; font-size: 13px; font-weight: 600; color: #9aa5b8;
+      background: none; border: 0; border-radius: 999px; min-height: 40px; padding: 8px 14px; cursor: pointer;
+    }
+    html[lang="ar"] .lang button[data-lang="ar"],
+    html[lang="en"] .lang button[data-lang="en"] { background: #ffb703; color: #14110a; }
     .card {
       max-width: 540px;
       width: 100%;
@@ -41,129 +61,221 @@
       overflow: hidden;
       box-shadow: 0 20px 50px rgba(0,0,0,0.7);
     }
-    .banner {
-      width: 100%;
-      display: block;
-    }
-    .content {
-      padding: 24px 20px 28px;
-    }
-    h1 {
-      font-size: 26px;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-      color: #ffb703;
-    }
-    .sub {
-      color: #b0b8c8;
-      font-size: 15px;
-      line-height: 1.5;
-      margin-bottom: 22px;
-    }
-    .btns {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+    .banner { width: 100%; height: auto; display: block; aspect-ratio: 1000 / 499; object-fit: cover; background: #0b0e15; }
+    .content { padding: 22px 16px 26px; }
+    h1 { font-size: 28px; letter-spacing: 1.5px; margin-bottom: 6px; color: #ffb703; }
+    .sub { color: #b0b8c8; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
+    .stats { display: flex; gap: 8px; margin-bottom: 20px; }
+    .stat { flex: 1; background: #171c2a; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 10px 4px; }
+    .stat b { display: block; font-size: 22px; color: #fff; line-height: 1.1; }
+    .stat span { font-size: 12px; color: #8b95a8; }
+    .btns { display: flex; flex-direction: column; gap: 12px; }
     .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px 20px;
-      border-radius: 12px;
-      font-size: 17px;
-      font-weight: 700;
-      text-decoration: none;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 54px; padding: 14px 18px; border-radius: 12px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
       transition: transform 0.15s ease, opacity 0.15s ease;
     }
     .btn:hover { transform: translateY(-2px); opacity: 0.95; }
-    .btn-play {
-      background: linear-gradient(135deg, #ff5400, #ff8800);
-      color: #fff;
-      box-shadow: 0 6px 20px rgba(255, 84, 0, 0.4);
-    }
-    .btn-pc {
-      background: #1e2638;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.15);
-    }
-    .btn-ios {
-      background: #161b26;
-      color: #8b95a8;
-      border: 1px dashed rgba(255,255,255,0.15);
-      cursor: default;
-    }
-    .footer {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #6c7588;
-    }
-    .footer a { color: #9aa5b8; text-decoration: none; }
+    .btn-play { background: linear-gradient(135deg, #ff5400, #ff8800); color: #fff; box-shadow: 0 6px 20px rgba(255, 84, 0, 0.4); }
+    .btn-pc { background: #1e2638; color: #fff; border: 1px solid rgba(255,255,255,0.15); }
+    .btn-ios { background: #161b26; color: #8b95a8; border: 1px dashed rgba(255,255,255,0.15); cursor: default; font-size: 15px; }
+    .btn-ios:hover { transform: none; }
+    .free { margin-top: 12px; font-size: 13px; color: #8b95a8; }
     .status-msg {
-      display: none;
-      margin-bottom: 16px;
-      padding: 10px 14px;
-      border-radius: 8px;
-      background: rgba(255, 183, 3, 0.12);
-      color: #ffd166;
-      font-size: 14px;
+      display: none; margin-bottom: 16px; padding: 10px 14px; border-radius: 8px;
+      background: rgba(255, 183, 3, 0.12); color: #ffd166; font-size: 14px;
     }
+    .follow { max-width: 540px; width: 100%; margin-top: 22px; }
+    .follow h2 { font-size: 13px; font-weight: 600; color: #8b95a8; letter-spacing: 0.5px; margin-bottom: 10px; }
+    .social { display: flex; justify-content: center; gap: 12px; }
+    .social a {
+      width: 48px; height: 48px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: #111520; border: 1px solid rgba(255,255,255,0.12); color: #dfe5ef;
+      transition: transform 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .social a:hover { transform: translateY(-2px); color: #ffb703; border-color: #ffb703; }
+    .social svg { width: 21px; height: 21px; fill: currentColor; }
+    .studio { margin-top: 26px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; }
+    .studio span { font-size: 12px; color: #6c7588; letter-spacing: 0.5px; }
+    .studio img { height: 26px; width: auto; opacity: 0.9; }
+    .footer { margin-top: 14px; font-size: 13px; color: #6c7588; }
+    .footer a { color: #9aa5b8; text-decoration: none; }
   </style>
   <script>
-    const PLAY_URL = "https://play.google.com/store/apps/details?id=com.games105.convoyblast";
+    // ── Settings ────────────────────────────────────────────────────────────────────────────
+    const PLAY_BASE = "https://play.google.com/store/apps/details?id=com.games105.convoyblast";
     // Paste the App Store link here once Apple approves (e.g. "https://apps.apple.com/app/id1234567890").
     // Empty = iPhone/iPad visitors see "Coming Soon" instead of being redirected.
     const APP_STORE_URL = "";
+    // Visit + click counting. Paste the GoatCounter site code here (the "mycode" of mycode.goatcounter.com).
+    // Empty = nothing is counted and no third-party script is loaded.
+    const GOATCOUNTER_CODE = "convoyblast";
+
+    // Where the visitor came from: share the link as .../convoyblast/?s=whatsapp (letters, digits, - _).
+    const SRC = ((new URLSearchParams(location.search).get("s") || "").toLowerCase().match(/^[a-z0-9_-]{1,24}$/) || ["direct"])[0];
+    // Google Play reports installs per utm_source / utm_campaign (Play Console → acquisition reports).
+    const PLAY_URL = PLAY_BASE + "&referrer=" + encodeURIComponent("utm_source=hub&utm_medium=smartlink&utm_campaign=" + SRC);
+
+    let counterReady = null;
+    if (GOATCOUNTER_CODE) {
+      // One page per source: without this every ?fbclid=… / ?lang=… link would be listed as its own page.
+      window.goatcounter = { path: "visit/" + SRC };
+      counterReady = new Promise((resolve) => {
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://gc.zgo.at/count.js";
+        s.dataset.goatcounter = "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count";
+        s.onload = resolve;
+        s.onerror = resolve;
+        document.head.appendChild(s);
+      });
+    }
+    // Counts one named event, tagged with the source (e.g. "click-android/whatsapp").
+    function track(name) {
+      if (!counterReady) return;
+      counterReady.then(() => {
+        try { window.goatcounter.count({ path: name + "/" + SRC, title: name, event: true }); } catch (e) {}
+      });
+    }
+    // Lets the count leave the browser before the page is replaced; never holds the visitor for long.
+    function leave(url, name, replace) {
+      track(name);
+      const go = () => { replace ? location.replace(url) : (location.href = url); };
+      if (!counterReady) { setTimeout(go, replace ? 600 : 0); return; }
+      let gone = false;
+      const once = () => { if (!gone) { gone = true; go(); } };
+      counterReady.then(() => setTimeout(once, 300));
+      setTimeout(once, 1500);
+    }
+
+    // A plain click waits for its count, then navigates. With no counter, or a new-tab click, the browser's own
+    // navigation is left alone (this page stays open, so the count has time to leave).
+    function storeClick(e, url, name) {
+      if (!counterReady || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) { track(name); return; }
+      e.preventDefault();
+      leave(url, name, false);
+    }
+
     window.addEventListener("DOMContentLoaded", () => {
       const ua = navigator.userAgent || "";
       const isAndroid = /Android/i.test(ua);
       // iPadOS 13+ reports a desktop Mac user agent; touch points tell it apart from a real Mac.
       const isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
       const msgEl = document.getElementById("status-msg");
+      const show = (en, ar) => {
+        if (!msgEl) return;
+        msgEl.style.display = "block";
+        msgEl.innerHTML = '<span class="en"></span><span class="ar"></span>';
+        msgEl.children[0].textContent = en;
+        msgEl.children[1].textContent = ar;
+      };
+      // If the store opens as a separate app this page stays loaded: do not leave "Opening…" up forever.
+      const hideSoon = () => setTimeout(() => { if (msgEl) msgEl.style.display = "none"; }, 5000);
+
+      document.querySelectorAll("a[data-store]").forEach((a) => {
+        a.href = PLAY_URL;
+        a.addEventListener("click", (e) => { storeClick(e, PLAY_URL, "click-" + a.dataset.store); });
+      });
+      document.querySelectorAll("a[data-social]").forEach((a) => {
+        a.addEventListener("click", () => track("social-" + a.dataset.social));
+      });
+
       const iosBtn = document.getElementById("btn-ios");
       if (APP_STORE_URL && iosBtn) {
-        iosBtn.outerHTML = '<a id="btn-ios" class="btn btn-pc" href="' + APP_STORE_URL + '"><span>🍎 Download Free on the App Store (iPhone / iPad)</span></a>';
+        const a = document.createElement("a");
+        a.id = "btn-ios";
+        a.className = "btn btn-pc";
+        a.href = APP_STORE_URL;
+        a.innerHTML = '<span class="en">🍎 Download Free on the App Store</span><span class="ar">🍎 حمّلها مجاناً من App Store</span>';
+        a.addEventListener("click", (e) => { storeClick(e, APP_STORE_URL, "click-ios"); });
+        iosBtn.replaceWith(a);
       }
-      const go = (url, text) => {
-        if (msgEl) { msgEl.style.display = "block"; msgEl.innerText = text; }
-        setTimeout(() => { window.location.replace(url); }, 600);
-      };
-      if (isAndroid) {
-        go(PLAY_URL, "Redirecting to Google Play Store... | جاري تحويلك إلى متجر Google Play...");
-      } else if (isIOS) {
-        if (APP_STORE_URL) {
-          go(APP_STORE_URL, "Redirecting to the App Store... | جاري تحويلك إلى App Store...");
-        } else if (msgEl) {
-          msgEl.style.display = "block";
-          msgEl.innerText = "iOS version for iPhone & iPad is coming very soon! | نسخة الآيفون قريباً جداً!";
-        }
+
+      // Phones go straight to their store — once per visit, so coming back shows this page instead of bouncing again.
+      const willBounce = isAndroid || (isIOS && APP_STORE_URL);
+      let bounced = false;
+      if (willBounce) {
+        try { bounced = sessionStorage.getItem("cb_bounced") === "1"; sessionStorage.setItem("cb_bounced", "1"); } catch (e) {}
+      }
+      if (isAndroid && !bounced) {
+        show("Opening Google Play…", "جاري فتح متجر Google Play…");
+        leave(PLAY_URL, "auto-android", true);
+        hideSoon();
+      } else if (isIOS && APP_STORE_URL && !bounced) {
+        show("Opening the App Store…", "جاري فتح App Store…");
+        leave(APP_STORE_URL, "auto-ios", true);
+        hideSoon();
+      } else if (isIOS && !APP_STORE_URL) {
+        show("The iPhone & iPad version is coming very soon!", "نسخة الآيفون والآيباد قريباً جداً!");
+        track("ios-waiting");
       }
     });
   </script>
 </head>
 <body>
-  <div class="card">
-    <img class="banner" src="../assets/convoy_blast_banner.jpg" alt="Convoy Blast">
+  <header class="top">
+    <a href="../" aria-label="105GAMES"><img src="../assets/105g_logo.png" alt="105GAMES" width="129" height="30"></a>
+    <div class="lang"><button type="button" data-lang="ar">العربية</button><button type="button" data-lang="en">English</button></div>
+  </header>
+
+  <main class="card">
+    <img class="banner" src="../assets/convoy_blast_banner.jpg" alt="Convoy Blast" width="1000" height="499">
     <div class="content">
       <h1>CONVOY BLAST</h1>
-      <p class="sub">100 Stages • 10 Giant Bosses • 5 Armored War-Trucks<br>قُد قافلتك المدرعة عبر 100 مرحلة و10 زعماء عمالقة!</p>
+      <p class="sub en">Drive your armored war-truck through the horde — upgrade it, arm it, and take down the giants.</p>
+      <p class="sub ar">قُد شاحنتك المدرّعة وسط الجحافل — طوّرها، سلّحها، وأسقِط العمالقة.</p>
+
+      <div class="stats">
+        <div class="stat"><b>100</b><span class="en">Stages</span><span class="ar">مرحلة</span></div>
+        <div class="stat"><b>10</b><span class="en">Giant Bosses</span><span class="ar">زعماء عمالقة</span></div>
+        <div class="stat"><b>5</b><span class="en">War-Trucks</span><span class="ar">شاحنات حربية</span></div>
+      </div>
+
       <div id="status-msg" class="status-msg"></div>
       <div class="btns">
-        <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.games105.convoyblast">
-          <span>📲 Download Free on Google Play (Android)</span>
+        <a class="btn btn-play" data-store="android" href="https://play.google.com/store/apps/details?id=com.games105.convoyblast">
+          <span class="en">📲 Download Free on Google Play</span><span class="ar">📲 حمّلها مجاناً من Google Play</span>
         </a>
-        <a class="btn btn-pc" href="https://play.google.com/store/apps/details?id=com.games105.convoyblast">
-          <span>💻 Play on PC (Google Play Games)</span>
+        <a class="btn btn-pc" data-store="pc" href="https://play.google.com/store/apps/details?id=com.games105.convoyblast">
+          <span class="en">💻 Play on PC</span><span class="ar">💻 العبها على الكمبيوتر</span>
         </a>
         <div id="btn-ios" class="btn btn-ios">
-          <span>🍎 App Store (iPhone / iPad) — Coming Soon</span>
+          <span class="en">🍎 iPhone / iPad — Coming Soon</span><span class="ar">🍎 آيفون / آيباد — قريباً</span>
         </div>
       </div>
-      <div class="footer">
-        <a href="../">105GAMES Official Hub</a> • <a href="../convoy-blast/privacy.html">Privacy Policy</a>
-      </div>
+      <p class="free en">Free to play · Android &amp; PC</p>
+      <p class="free ar">مجانية · أندرويد وكمبيوتر</p>
     </div>
+  </main>
+
+  <section class="follow">
+    <h2 class="en">FOLLOW 105GAMES</h2>
+    <h2 class="ar">تابع 105GAMES</h2>
+    <div class="social">
+      <a data-social="facebook" href="https://www.facebook.com/profile.php?id=61563913678364" rel="noopener" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a data-social="instagram" href="https://www.instagram.com/105_games/" rel="noopener" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" style="fill:currentColor;stroke:none"/></svg>
+      </a>
+      <a data-social="tiktok" href="https://www.tiktok.com/@105_games" rel="noopener" target="_blank" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+      </a>
+      <a data-social="x" href="https://x.com/105_Games" rel="noopener" target="_blank" aria-label="X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <a class="studio" href="../">
+    <span class="en">A GAME BY</span><span class="ar">لعبة من</span>
+    <img src="../assets/105g_logo.png" alt="105GAMES" width="112" height="26">
+  </a>
+  <div class="footer">
+    <a href="../convoy-blast/privacy.html"><span class="en">Privacy Policy</span><span class="ar">سياسة الخصوصية</span></a>
+    • <a href="mailto:105gamesps@gmail.com"><span class="en">Contact</span><span class="ar">تواصل معنا</span></a>
   </div>
 </body>
 </html>
